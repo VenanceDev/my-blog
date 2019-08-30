@@ -1,0 +1,18 @@
+<li style="border-left:none; border-right:none;" [ngClass]="{'list-group-item': true, 
+            'list-group-item-success': post_item.loveIts>0,
+            'list-group-item-danger':post_item.loveIts<0}">
+    <div class="row">
+        <h4 class="col-8">{{post_item.title}}</h4>
+        <h6 class="col-4 text-muted small text-right font-italic font-weight-normal">
+            {{post_item.created_at | date: 'E, dd/MM/yyyy, HH:mm'}} AM
+        </h6>
+    </div>
+    <p>{{post_item.content}}</p>
+    <button class="btn btn-sm btn-success like" style="margin-right: 25px;" (click)="onLoveIt()">
+        <i class="far fa-thumbs-up"></i>
+    </button>
+    <span class="font-weight-bold text-muted">{{post_item.loveIts}}</span>
+    <button class="btn btn-sm btn-danger dislike" style="margin-left: 25px;" (click)="onDontLoveIt()">
+        <i class="far fa-thumbs-down"></i>
+    </button>
+</li>

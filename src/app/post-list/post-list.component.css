@@ -1,0 +1,19 @@
+#post-title::after {
+    content: "";
+    border: solid 1.4px #555;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25px;
+    width: 100px;
+}
+
+#post-title::before {
+    content: "";
+    border: solid 1.4px #555;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+    width: 100px;
+}
